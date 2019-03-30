@@ -1,0 +1,318 @@
+body {
+    background: url(https://previews.123rf.com/images/liwei12/liwei121802/liwei12180200030/95353955-crumpled-paper-background-close-up-of-crumbled-paper.jpg);
+  }
+  header {
+    min-height: 20px;
+  
+    /* border: 2px solid blue; */
+  }
+  
+  nav {
+    /* border: 2px solid red; */
+    width: 100%;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+    /* border: 2px solid blue; */
+    height: 500px;
+    margin: 10px 0px;
+  }
+  /* ====== Notes ======
+  Height changes the height of the css selector regardless of
+  content positioning.
+  */
+  
+  main p {
+    font-size: 14px;
+  }
+  
+  footer {
+    min-height: 20px;
+  
+    /* border: 2px solid blue; */
+  }
+  
+  h1 {
+    font-family: "Gloria Hallelujah", cursive;
+  }
+  p {
+    font-family: "Gloria Hallelujah", cursive;
+  }
+  
+  li {
+    font-family: muli;
+  }
+  
+  #logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+    border: 2px solid grey;
+    background: white;
+  }
+  /* ====== Notes ======
+  You can use either float or flexbox to sort out the header
+  
+  **display-flex only needs to be declared in parent element
+  */
+  #contact {
+    margin-left: auto;
+    align-self: flex-start;
+  
+    background: grey;
+    /* border: 1px solid red; */
+    height: 10%;
+  }
+  
+  #logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    /* border: 2px solid grey; */
+  }
+  
+  #logo p {
+    font-family: "Homemade Apple", cursive;
+    text-decoration: underline;
+  }
+  
+  #logo img {
+    object-fit: cover;
+    height: 50%;
+    width: 15%;
+  }
+  
+  .main-container {
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+  
+    border: 2px dashed grey;
+    background: white;
+    width: 33%;
+    height: 70%;
+  }
+  
+  .text-content {
+    border: 1px solid black;
+  }
+  
+  .nav-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-btns li {
+    font-weight: bold;
+    list-style: none;
+  
+    background: white;
+    border: 2px dotted grey;
+  }
+  
+  .nav-header {
+  }
+  
+  .nav-footer {
+  }
+  
+  .arti-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    order: 1;
+  
+    border: 1px solid black;
+    height: 30%;
+    width: 100%;
+  }
+  
+  .arti {
+    display: flex;
+    flex-direction: column;
+    /* justify-items: space-around;
+    align-items: center; */
+  
+    border: 2px dashed grey;
+    background: white;
+    height: 80%;
+    width: 23%;
+  }
+  
+  .arti p {
+    align-self: center;
+    height: 30%;
+    width: 100%;
+  }
+  
+  .arti img {
+    align-self: center;
+    height: 50%;
+    width: 60%;
+  }
+  
+  .img-container {
+    display: flex;
+    flex-wrap: wrap;
+  
+    background: white;
+    border: 2px dashed grey;
+    height: 70%;
+    width: 65%;
+  }
+  
+  .feature-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .feature-img img {
+    /* background-color: red; */
+    height: 95%;
+    width: 85%;
+  }
+  
+  .img-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 20px;
+  }
+  
+  .img-box img {
+    height: 90%;
+    width: 23%;
+  }
+  
+  /*=============Responsive Implementation=================
+  The current design has been made around 661px w / 328px h.
+  Actual laptop screen:(1980px w / 1080px h) 1536w / 338px h ... I don't know why the 
+  browser is different from the actual resolution.
+  */
+  
+  /*Mobile Device*/
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+      display: flex;
+      flex-direction: column;
+      /* width: 75%; */
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  
+      height: 20%;
+    }
+    header nav {
+    }
+    header nav li {
+    }
+  
+    main {
+      display: flex;
+      justify-content: center;
+      /* align-content: space-around; */
+      height: 60%;
+    }
+  
+    footer {
+      height: 20%;
+    }
+  
+    #logo {
+      width: 100%;
+    }
+  
+    #logo img {
+      width: 40%;
+    }
+    .nav-btns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  
+      text-align: center;
+    }
+  
+    .nav-btns li {
+      width: 30%;
+      height: 25%;
+  
+      margin: 0;
+    }
+  
+    .content {
+      display: flex;
+      width: 100%;
+      height: 50%;
+  
+      /* margin: 0% 0% 3% 0%; */
+    }
+  
+    .content h1 {
+      align-self: center;
+      justify-content: flex-start;
+      font-size: 50px;
+  
+      margin: 0;
+    }
+    .img-container {
+      display: flex;
+      width: 100%;
+  
+      margin: 3% 0%;
+    }
+  
+    .feature-img {
+      align-content: center;
+    }
+  
+    .img-box {
+      flex-direction: column;
+      align-self: flex-end;
+    }
+  
+    .img-box img {
+      align-self: center;
+      align-content: space-around;
+  
+      margin: 2%;
+      height: 100%;
+      width: 100%;
+    }
+    .arti-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .arti {
+      display: flex;
+      flex-direction: row;
+  
+      width: 100%;
+    }
+  }
+  
+  .nav-footer {
+  }
+  
+  /*Tablet Device*/
+  @media only screen and (min-width: 481px) and (max-width: 800px) {
+  }
+  
