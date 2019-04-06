@@ -1,5 +1,9 @@
 body {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
     background: url(https://previews.123rf.com/images/liwei12/liwei121802/liwei12180200030/95353955-crumpled-paper-background-close-up-of-crumbled-paper.jpg);
+    
   }
   header {
     min-height: 20px;
@@ -13,13 +17,13 @@ body {
   }
   
   main {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; */
   
     /* border: 2px solid blue; */
-    height: 500px;
-    margin: 10px 0px;
+    /* height: 500px;
+    margin: 10px 0px; */
   }
   /* ====== Notes ======
   Height changes the height of the css selector regardless of
@@ -32,7 +36,6 @@ body {
   
   footer {
     min-height: 20px;
-  
     /* border: 2px solid blue; */
   }
   
@@ -59,6 +62,18 @@ body {
   You can use either float or flexbox to sort out the header
   
   **display-flex only needs to be declared in parent element
+
+  **Apply overflow: hidden,
+  ** Apply background-image: url();
+
+  ** Apply background-size:auto, contain, cover ...
+Image sizing
+  wrap img in div and size the div
+
+  Position:
+  position: absoulte
+  position: relative
+  position: fixed
   */
   #contact {
     margin-left: auto;
@@ -66,7 +81,7 @@ body {
   
     background: grey;
     /* border: 1px solid red; */
-    height: 10%;
+    height: 10%; 
   }
   
   #logo {
@@ -87,10 +102,28 @@ body {
     height: 50%;
     width: 15%;
   }
-  
-  .main-container {
+/* this is to wrap page so it has a border around all the content */
+  .page-wrapper {
+    /* display: flex;
+    justify-content: center; */
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid red; */
   }
   
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-between;
+    width: 100%;
+  }
+  .content-wrapper {
+    height: 70%;
+    width: 100%;
+  }
+
   .content {
     display: flex;
     flex-direction: column;
@@ -98,11 +131,11 @@ body {
     border: 2px dashed grey;
     background: white;
     width: 33%;
-    height: 70%;
+    width: 100%;
   }
   
   .text-content {
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
   
   .nav-btns {
@@ -128,28 +161,39 @@ body {
   
   .nav-footer {
   }
+
+  .arti-container-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    
+    height: 100%;
+    width: 100%;
+    margin: 10px;
+    
+  }
   
   .arti-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    order: 1;
+    justify-content: flex-end;
+    /* align-self: flex-end; */
+    /* order: 1; */
   
-    border: 1px solid black;
-    height: 30%;
+    /* border: 1px solid black; */
+    /* height: 30%; */
     width: 100%;
   }
   
   .arti {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    
     /* justify-items: space-around;
     align-items: center; */
   
     border: 2px dashed grey;
     background: white;
-    height: 80%;
-    width: 23%;
+    /* height: 80%;
+    width: 23%; */
   }
   
   .arti p {
@@ -160,42 +204,62 @@ body {
   
   .arti img {
     align-self: center;
-    height: 50%;
+    /* height: 50%; */
     width: 60%;
   }
   
   .img-container {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   
     background: white;
     border: 2px dashed grey;
-    height: 70%;
-    width: 65%;
+ 
+    width: 100%;
+  }
+
+  .img-wrapper {
+    /* display: flex; */
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    
+    
+    /* border: 2px solid red; */
+    /* align-items: center; */
+    justify-content: space-around;
+    
+    
   }
   
   .feature-img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px 0px;
+
+    /* height: 60%; */
+    width: 100%;
   }
   
   .feature-img img {
     /* background-color: red; */
-    height: 95%;
-    width: 85%;
+    width: 100%;
   }
-  
+  .img-box-wrapper {
+    display: flex;
+    justify-content: center;
+
+    /* border: 2px solid red; */
+  }
   .img-box {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    margin: 0px 20px;
+    margin: 0px 20px;    
+    width: 100%
   }
   
   .img-box img {
-    height: 90%;
-    width: 23%;
+    width: 100%;
   }
   
   /*=============Responsive Implementation=================
@@ -281,19 +345,32 @@ body {
     .feature-img {
       align-content: center;
     }
+
+    .img-box-wrapper {
+      display: flex;
+      justify-content: space-between;
+      
+    }
   
     .img-box {
-      flex-direction: column;
+      /* flex-direction: column;
       align-self: flex-end;
+       */
+      width: 100%;
     }
   
     .img-box img {
-      align-self: center;
+      /* align-self: center;
       align-content: space-around;
   
       margin: 2%;
-      height: 100%;
+      height: 100%; */
       width: 100%;
+    }
+
+    .img-wrapper {
+      width: 100%;
+
     }
     .arti-container {
       display: flex;
@@ -314,5 +391,7 @@ body {
   
   /*Tablet Device*/
   @media only screen and (min-width: 481px) and (max-width: 800px) {
+    .arti {
+      display: flex;
   }
   
